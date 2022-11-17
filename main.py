@@ -16,7 +16,7 @@ while True:
         print ("motion detected")
         videoh264 = '/home/pi/' + time.ctime() + '.h264'
         videoMP4 = '/home/pi/' + time.ctime() + '.h264'
-        convert(videoh264, videoMP4)
+        recordMP4(videoh264, videoMP4)
         
         emailContent = "Motion Detected at: " + time.ctime()
         sender.sendmail(sendTo, emailSubject, emailContent, videoMP4)
